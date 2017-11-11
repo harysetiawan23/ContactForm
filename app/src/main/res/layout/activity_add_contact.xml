@@ -179,7 +179,7 @@
             <it.creative.contactphone.Font.FuturaRegular
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="BEAUTY LEVEL :"
+                android:text="CHARM LEVEL :"
                 android:layout_marginBottom="3dp"/>
 
             <SeekBar

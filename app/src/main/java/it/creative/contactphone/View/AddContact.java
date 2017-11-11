@@ -20,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
@@ -30,6 +31,7 @@ import it.creative.contactphone.Model.Contact;
 import it.creative.contactphone.R;
 
 public class AddContact extends AppCompatActivity {
+
     private ImageView mContactImage;
     private EditText mName, mEmail, mPhone;
     private Button mSubmit;
@@ -159,7 +161,7 @@ public class AddContact extends AppCompatActivity {
         builder.setPositiveButton("Save", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Log.d("Contact","ID"+contact.getContact_id()+
+                Log.d("Contact","ID"+Config.getRandomNumber()+
                         "Beauty"+contact.getContact_beauty()+
                         "Name"+contact.getContact_name()+
                         "EMAIL"+contact.getContact_email()+
@@ -168,6 +170,7 @@ public class AddContact extends AppCompatActivity {
                         "Phone"+contact.getContact_phone()
                 );
                 mContactDB.addContact(contact);
+                Toast.makeText(mContext,"Insert Success",Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
@@ -210,6 +213,7 @@ public class AddContact extends AppCompatActivity {
             if (resultCode == RESULT_OK) {
                 resultUri = result.getUri();
                 mContactImage.setImageURI(resultUri);
+                mContactImage.setPadding(0,0,0,0);
             } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
                 Exception error = result.getError();
             }

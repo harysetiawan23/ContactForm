@@ -155,6 +155,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(Config.CONTACT_EMAIL, contact.getContact_email());// Contact Email
         values.put(Config.CONTACT_PHONE, contact.getContact_phone());// Contact Phone
         values.put(Config.CONTACT_IMAGE, contact.getContact_img_uri());// Contact Image
+        values.put(Config.CONTACT_HOBBIES,contact.getContact_hobbies());//Contact Hobbies
+        values.put(Config.CONTACT_SEX,contact.getContact_sex());//Contact Sex
+        values.put(Config.CONTACT_BEAUTY,contact.getContact_beauty());//Contact Beauty
+
 
         // updating row
         return db.update(TABLE_CONTACTS, values, Config.CONTACT_ID + " = ?",

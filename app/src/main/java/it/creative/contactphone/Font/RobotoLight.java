@@ -28,7 +28,7 @@ public class RobotoLight extends TextView {
     }
 
     public void init() {
-        Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "fontsRoboto/Roboto_Thin.ttf");
+        Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/Roboto_Thin.ttf");
         setTypeface(tf ,1);
 
     }
