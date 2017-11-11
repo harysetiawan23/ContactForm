@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="it.creative.contactphone.View.AddContact">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/add_contact_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <it.creative.contactphone.Font.FuturaRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="NEW CONTACT"
+                android:textColor="@color/customBlack"
+                android:textSize="18sp" />
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <it.creative.contactphone.Font.FuturaRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="INSERT YOUT CONTACT \nINFORMATION DETAILS"
+                android:textColor="@color/customBlack"
+                android:textSize="24dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/customBlack" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:layout_marginBottom="12dp">
+
+                <ImageView
+                    android:id="@+id/add_contact_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="67dp"
+                    android:src="@drawable/ic_camera_black_24dp" />
+            </FrameLayout>
+
+            <EditText
+                android:id="@+id/add_contact_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/editext_border"
+                android:hint="Name"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/add_contact_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/editext_border"
+                android:hint="E-mail"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/add_contact_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/editext_border"
+                android:hint="Phone"
+                android:inputType="phone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <it.creative.contactphone.Font.FuturaRegular
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:text="SEX :" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/add_contact_male"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Male" />
+
+                        <RadioButton
+                            android:id="@+id/add_contact_female"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Female" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <it.creative.contactphone.Font.FuturaRegular
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:text="HOBBIES :" />
+
+                    <CheckBox
+                        android:id="@+id/add_contact_shopping"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Shopping" />
+
+                    <CheckBox
+                        android:id="@+id/add_contact_sports"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sports" />
+
+                    <CheckBox
+                        android:id="@+id/add_contact_dance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dance" />
+
+                    <CheckBox
+                        android:id="@+id/add_contact_fashion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fashion" />
+
+                    <CheckBox
+                        android:id="@+id/add_contact_organization"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Organization" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <it.creative.contactphone.Font.FuturaRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BEAUTY LEVEL :"
+                android:layout_marginBottom="3dp"/>
+
+            <SeekBar
+                android:id="@+id/add_contact_beauty"
+                android:max="100"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:backgroundTint="@color/customBlack"
+                android:progressBackgroundTint="@color/customBlack" />
+
+            <Button
+                android:id="@+id/add_contact_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/button_shape"
+                android:text="SUBMIT"
+                android:textColor="#fff" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
