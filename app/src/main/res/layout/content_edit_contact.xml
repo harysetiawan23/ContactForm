@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="it.creative.contactphone.View.EditContact"
+    tools:showIn="@layout/activity_edit_contact">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <it.creative.contactphone.Font.FuturaRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="INSERT YOUT CONTACT \nINFORMATION DETAILS"
+                android:textColor="@color/customBlack"
+                android:textSize="24dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/customBlack" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:layout_marginBottom="12dp">
+
+                <ImageView
+                    android:id="@+id/add_contact_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="67dp"
+                    android:src="@drawable/ic_camera_black_24dp" />
+            </FrameLayout>
+
+            <it.creative.contactphone.Font.FuturaRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="Name :" />
+
+            <EditText
+                android:id="@+id/add_contact_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/editext_border"
+                android:hint="Name"
+                android:inputType="text" />
+
+            <it.creative.contactphone.Font.FuturaRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="Email :" />
+
+            <EditText
+                android:id="@+id/add_contact_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/editext_border"
+                android:hint="E-mail"
+                android:inputType="textEmailAddress" />
+
+            <it.creative.contactphone.Font.FuturaRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="Phone :" />
+
+            <EditText
+                android:id="@+id/add_contact_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/editext_border"
+                android:hint="Phone"
+                android:inputType="phone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <it.creative.contactphone.Font.FuturaRegular
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:text="SEX :" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/add_contact_male"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Male" />
+
+                        <RadioButton
+                            android:id="@+id/add_contact_female"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Female" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <it.creative.contactphone.Font.FuturaRegular
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:text="HOBBIES :" />
+
+                    <EditText
+                        android:id="@+id/add_contact_hobbies"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/editext_border" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <it.creative.contactphone.Font.FuturaRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:text="CHARM LEVEL :" />
+
+            <SeekBar
+                android:id="@+id/add_contact_beauty"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:backgroundTint="@color/customBlack"
+                android:max="100"
+                android:progressBackgroundTint="@color/customBlack" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/add_contact_submit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_shape"
+                    android:text="SUBMIT"
+                    android:textColor="#fff" />
+
+                <Button
+                    android:id="@+id/add_contact_hapus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_shape_2"
+                    android:text="DELETE"
+                    android:textColor="#000" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
